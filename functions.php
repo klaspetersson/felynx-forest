@@ -6,6 +6,16 @@
  * @since Felynx Forest 1.0
  */
 
+//Redux 
+
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/options/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/options/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/options/sample/sample-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/options/sample/barebones-config.php' );
+}
+
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 800; // size of .container
 }
@@ -93,6 +103,6 @@ add_action( 'widgets_init', 'felynxforest_widgets_init' );
 
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/walker.php';
-require_once (dirname(__FILE__) . '/options/barebones-config.php');
+
 
 ?>
