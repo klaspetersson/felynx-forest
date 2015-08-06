@@ -103,6 +103,7 @@ add_action( 'widgets_init', 'felynxforest_widgets_init' );
 
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/walker.php';
-
+require_once (dirname(__FILE__) . '/options/ReduxCore/framework.php');
+require_once (dirname(__FILE__) . '/options/config/alright-config.php');
 
 ?>
