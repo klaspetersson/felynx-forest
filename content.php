@@ -45,7 +45,13 @@
 		<?php endif ?>
 
 		<div class="the-content container" id="content-<?php the_ID(); ?>">
-			<?php the_content(); ?>
+			<?php
+			if ( is_woocommerce() ) {
+				woocommerce_content();
+			} else {
+				the_content();
+			}
+			?>
 			<?php wp_link_pages(); ?>
 			<div class="clear"></div>
 		</div>
